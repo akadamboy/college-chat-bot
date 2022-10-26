@@ -20,6 +20,8 @@ FUNCTIONS = {"faculty": getFaculty}
 
 
 def getresponse(text):
+    text = text.lower()
+    text = re.sub(r'[^\w\s]', '', text)
     for each in DATA:
         for p in each['patterns']:
 
